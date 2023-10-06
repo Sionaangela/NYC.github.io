@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<meta
+			name="description"
+			content="Discover New York City's vibrant culture and attractions on our comprehensive NYC travel guide. Find flight times to NYC, explore diverse neighborhoods, uncover top tourist destinations, and choose from a curated selection of the finest hotels for your unforgettable NYC experience."
+		/>
+		<meta name="author" content="Aniqa" />
+		<meta property="og:title" content="Travel Guide: New York City" />
+		<meta
+			property="og:description"
+			content="Discover New York City's vibrant culture and attractions on our comprehensive NYC travel guide. Find flight times to NYC, explore diverse neighborhoods, uncover top tourist destinations, and choose from a curated selection of the finest hotels for your unforgettable NYC experience."
+		/>
+		<meta property="og:image" content="/assets/nyc-landscape.jpeg" />
+		<meta property="og:url" content="https://aniqa.dev" />
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="Travel Guide: New York City" />
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:site" content="@aniqatc" />
+		<meta property="twitter:image" content="/assets/nyc-landscape.jpeg" />
+		<meta property="twitter:image:alt" content="Hero section of website" />
+		<title>Travel Guide: New York City</title>
+
+		<link rel="stylesheet" href="styles.css" >
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<link href="assets/favicon.png" type="image/x-icon" rel="icon" />
+		<script
+			src="https://kit.fontawesome.com/50cde61edc.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="header-text">
+					<h1><span>ABOUT US</span></h1>
+					<p>Hi this is SHINJINI & SIONA,
+						Welcome to our website, where dreams are as limitless as the city itself. At our New York Travel website, we're passionate about helping you discover the magic of this iconic metropolis. With a deep-rooted love for the city that never sleeps, our team of seasoned New Yorkers has curated a treasure trove of insider tips, hidden gems, and must-see attractions to ensure your visit is nothing short of extraordinary. Whether you're seeking Broadway's bright lights, Central Park's serene beauty, or the culinary delights of diverse neighborhoods, we're your trusted guide to navigating the endless possibilities of the five boroughs. Let us share our love for this vibrant city, one adventure at a time, and make your New York experience unforgettable.
+</p>
+				</div>
+				<div class="header-cards-wrapper">
+					<div class="header-card header-card__time">
+						<p>
+							<span id="time"></span>
+							<span>Time in NYC</span>
+						</p>
+						<i class="fa-regular fa-clock"></i>
+					</div>
+					
+					<div class="header-card header-card__weather">
+						<div>
+							<img
+								src="assets/weather/partly-cloudy-day.svg"
+								id="weather-icon"
+								alt="partly cloudy day"
+							/>
+						</div>
+						<div>
+							<p>
+								<span id="weather"></span>
+								<span>Current Weather</span>
+							</p>
+							<p>
+								<a
+									href="https://weather.aniqa.dev"
+									target="_blank"
+									rel="noopener noreferrer"
+									aria-label="Weather dashboard for full forecast"
+								>
+									<i class="fa-solid fa-arrow-right-to-bracket"></i>
+								</a>
+							</p>
+						</div>
+					</div>
+					<div class="header-card header-card__fromlocation">
+						<form>
+							<input
+								type="text"
+								placeholder="Search Airport Code"
+								maxlength="3"
+								pattern="[A-Za-z]+"
+								id="search-airport-input"
+							/>
+							<button
+								type="submit"
+								id="search-airport-btn"
+								aria-label="Get Flight Time"
+								aria-describedby="search-airport-input"
+							>
+								<i class="fa-solid fa-magnifying-glass"></i>
+							</button>
+							<button
+								id="search-location-btn"
+								aria-label="Get Flight Time to NYC via Geolocation"
+							>
+								<i class="fa-solid fa-location-dot"></i>
+							</button>
+						</form>
+						<p class="airport-code" id="airport-start-code">SFO</p>
+						<div class="loading-dots">
+							<span class="dot-start"
+								><i class="fa-regular fa-circle"></i
+							></span>
+							<span class="dot-between"
+								><i class="fa-solid fa-circle"></i
+							></span>
+							<span class="dot-between"
+								><i class="fa-solid fa-circle"></i
+							></span>
+							<span class="dot-between"
+								><i class="fa-solid fa-circle"></i
+							></span>
+							<span class="dot-between"
+								><i class="fa-solid fa-circle"></i
+							></span>
+							<span class="dot-between"
+								><i class="fa-solid fa-circle"></i
+							></span>
+							<span class="dot-end"
+								><i class="fa-regular fa-circle-dot"></i
+							></span>
+						</div>
+					</div>
+					<div class="header-card header-card__tolocation">
+						<div>
+							<i class="fa-solid fa-plane"></i>
+							<p>
+								Flight Time: <span id="flight-time">5H 30M</span><br />
+								Distance: <span id="flight-distance">4,143KM</span>
+							</p>
+						</div>
+						<p class="airport-code">JFK</p>
+					</div>
+					<nav class="header-nav">
+						<div class="header-nav__title">Menu</div>
+						<a href="#about" class="nav-link">
+							<div class="header-card header-card__nav-light">
+								<span>Everything You Need To Know</span>
+								<i class="fa-solid fa-chevron-down"></i>
+							</div>
+						</a>
+						<a href="#destinations" class="nav-link">
+							<div class="header-card header-card__nav-dark">
+								Explore Destinations
+							</div>
+						</a>
+						<a href="#neighborhoods" class="nav-link">
+							<div class="header-card header-card__nav-dark">
+								Neighborhood & Hotels
+							</div>
+						</a>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<aside>
+			<div class="container">
+				<span>
+					<label for="header-departure-input" class="flight-form__label"
+						>Departure</label
+					>
+					<input
+						id="header-departure-input"
+						type="date"
+						class="flight-form__input"
+						min="2023-09-13"
+				/></span>
+				<span>
+					<label for="header-arrival-input" class="flight-form__label"
+						>Arrival</label
+					>
+					<input
+						id="header-arrival-input"
+						type="date"
+						class="flight-form__input"
+						min="2023-09-13" /></span
+				><span>
+					<label for="header-travelers-input" class="flight-form__label"
+						>Travelers</label
+					>
+
+					<input
+						id="header-travelers-input"
+						type="number"
+						min="1"
+						max="10"
+						placeholder="#"
+						class="flight-form__input"
+				/></span>
+				<button id="flight-form-btn" type="submit">
+					Search Flights
+					<i class="fa-solid fa-arrow-right"></i>
+				</button>
+			</div>
+		</aside>
